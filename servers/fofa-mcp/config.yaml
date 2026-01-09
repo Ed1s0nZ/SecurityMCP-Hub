@@ -1,0 +1,13 @@
+# FOFA MCP 服务配置
+# 注意：敏感信息应通过环境变量设置，不要直接写入此文件
+
+# FOFA API 基础URL（通常不需要修改）
+fofa:
+  base_url: "https://fofa.info"
+  timeout: 30  # 请求超时时间（秒）
+
+# 服务器配置
+server:
+  name: "fofa-mcp"
+  version: "1.0.0"
+
