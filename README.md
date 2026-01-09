@@ -2,10 +2,15 @@
 
 一个网络安全相关的 MCP (Model Context Protocol) 服务集合，每个服务可独立部署，互不干涉。
 
+## 项目愿景
+
+构建一个完整的网络安全工具 MCP 服务生态，让大模型能够自主调用各类安全工具，实现智能化的安全测试、资产发现、漏洞扫描等任务。所有服务遵循统一标准，支持完全自主的参数配置，无需人工干预。
+
 ## 项目特点
 
-- 🚀 **独立部署**：每个服务独立编译和运行，互不依赖，按需部署
+- 🚀 **独立部署**：每个服务可独立编译和运行，互不依赖
 - 🔧 **统一接口**：所有服务遵循 MCP 标准协议
+- 🤖 **自主检索**：所有查询参数、翻页、返回数量等完全由大模型自主配置，无硬编码限制
 - 📦 **易于扩展**：提供模板和脚本，快速创建新服务
 
 ## 项目结构
@@ -19,7 +24,7 @@ SecurityMCP-Hub/
 │   ├── nmap-mcp/               # Nmap服务 (计划中)
 │   ├── nuclei-mcp/             # Nuclei服务 (计划中)
 │   ├── zoomeye-mcp/            # ZoomEye服务 (计划中)
-│   ├── xxx-mcp/                #  (计划中)
+│   │   ...                     # 更多服务持续开发中
 │   └── template/               # 新服务模板
 ├── docs/                        # 项目文档
 ├── scripts/                     # 辅助脚本
@@ -32,24 +37,9 @@ SecurityMCP-Hub/
 
 ### ✅ fofa-mcp
 
-FOFA 资产搜索服务，支持自主检索，所有查询参数、翻页、返回数量等完全由大模型自主配置。
+FOFA 资产搜索服务，支持大模型自主检索和配置。
 
-**功能特性：**
-- 🔍 资产搜索：支持 FOFA 所有查询语法
-- 📊 统计信息：获取查询结果的统计分析
-- 🖥️ 主机信息：获取指定主机的详细信息
-- 🔄 自主翻页：支持任意页码和每页数量配置
-
-**快速开始：**
-```bash
-cd servers/fofa-mcp
-go build -o fofa-mcp server.go
-export FOFA_EMAIL=your_email@example.com
-export FOFA_KEY=your_api_key_here
-./fofa-mcp
-```
-
-- [详细文档](./servers/fofa-mcp/README.md)
+详细功能和使用方法请查看：[fofa-mcp 文档](./servers/fofa-mcp/README.md)
 
 ## 部署方式
 
