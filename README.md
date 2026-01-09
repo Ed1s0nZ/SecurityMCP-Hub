@@ -96,6 +96,29 @@ export FOFA_KEY=your_api_key_here
 - [ ] nuclei-mcp - 漏洞扫描
 - [ ] zoomeye-mcp - ZoomEye 资产搜索
 
+## 新增服务需求
+
+如果您有新增 MCP 服务的需求，请提交 Issue。在 Issue 中请务必包含以下信息：
+
+- **工具名称**：要集成的安全工具名称
+- **API 文档**：如果工具提供 OpenAPI/Swagger 文档，请提供 API 地址
+- **命令行帮助**：如果工具是命令行工具，请提供 `--help` 或 `-h` 的输出信息
+- **使用场景**：简要说明该工具的主要用途和使用场景
+- **其他信息**：任何其他有助于理解工具功能的信息
+
+示例 Issue 格式：
+
+```
+工具名称：nmap
+API 文档：无（命令行工具）
+命令行帮助：
+$ nmap --help
+Nmap 7.94 ( https://nmap.org )
+Usage: nmap [Scan Type(s)] [Options] {target specification}
+...
+使用场景：网络端口扫描、服务识别、漏洞检测
+```
+
 ## 贡献指南
 
 欢迎贡献新的 MCP 服务！
