@@ -1,0 +1,3 @@
+# ZoomEye MCP 配置文件
+# 注意：建议使用环境变量 ZOOMEYE_API_KEY 来配置 API Key，而不是在此文件中硬编码
+

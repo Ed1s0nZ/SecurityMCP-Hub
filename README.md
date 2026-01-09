@@ -15,10 +15,10 @@ SecurityMCP-Hub/
 ├── README.md                    # 项目主文档
 ├── servers/                     # 核心目录：所有MCP服务
 │   ├── fofa-mcp/               # FOFA服务 ✅
+│   ├── zoomeye-mcp/           # ZoomEye服务 ✅
 │   ├── sqlmap-mcp/             # SQLMap服务 (计划中)
 │   ├── nmap-mcp/               # Nmap服务 (计划中)
 │   ├── nuclei-mcp/             # Nuclei服务 (计划中)
-│   ├── zoomeye-mcp/            # ZoomEye服务 (计划中)
 │   │   ...                     # 更多服务持续开发中
 │   └── template/               # 新服务模板
 ├── docs/                        # 项目文档
@@ -35,6 +35,12 @@ SecurityMCP-Hub/
 FOFA 资产搜索服务，支持大模型自主检索和配置。
 
 详细功能和使用方法请查看：[fofa-mcp 文档](./servers/fofa-mcp/README.md)
+
+### ✅ zoomeye-mcp
+
+ZoomEye 资产搜索服务，支持大模型自主检索和配置。
+
+详细功能和使用方法请查看：[zoomeye-mcp 文档](./servers/zoomeye-mcp/README.md)
 
 ## 部署方式
 
@@ -83,6 +89,12 @@ export FOFA_KEY=your_api_key_here
         "FOFA_EMAIL": "your_email@example.com",
         "FOFA_KEY": "your_api_key_here"
       }
+    },
+    "zoomeye": {
+      "command": "/path/to/SecurityMCP-Hub/servers/zoomeye-mcp/zoomeye-mcp",
+      "env": {
+        "ZOOMEYE_API_KEY": "your_api_key_here"
+      }
     }
   }
 }
@@ -91,10 +103,10 @@ export FOFA_KEY=your_api_key_here
 ## 开发计划
 
 - [x] fofa-mcp - FOFA 资产搜索
+- [x] zoomeye-mcp - ZoomEye 资产搜索
 - [ ] sqlmap-mcp - SQL 注入检测
 - [ ] nmap-mcp - 网络扫描
 - [ ] nuclei-mcp - 漏洞扫描
-- [ ] zoomeye-mcp - ZoomEye 资产搜索
 
 ## 新增服务需求
 
