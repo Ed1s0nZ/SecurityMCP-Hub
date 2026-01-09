@@ -4,9 +4,8 @@
 
 ## 项目特点
 
-- 🚀 **独立部署**：每个服务可独立编译和运行，互不依赖
+- 🚀 **独立部署**：每个服务独立编译和运行，互不依赖，按需部署
 - 🔧 **统一接口**：所有服务遵循 MCP 标准协议
-- 🤖 **自主检索**：所有查询参数、翻页、返回数量等完全由大模型自主配置，无硬编码限制
 - 📦 **易于扩展**：提供模板和脚本，快速创建新服务
 
 ## 项目结构
@@ -16,17 +15,11 @@ SecurityMCP-Hub/
 ├── README.md                    # 项目主文档
 ├── servers/                     # 核心目录：所有MCP服务
 │   ├── fofa-mcp/               # FOFA服务 ✅
-│   │   ├── README.md
-│   │   ├── server.go
-│   │   ├── go.mod
-│   │   ├── config.yaml
-│   │   ├── env.example
-│   │   └── src/
-│   │       └── fofa_client.go
 │   ├── sqlmap-mcp/             # SQLMap服务 (计划中)
 │   ├── nmap-mcp/               # Nmap服务 (计划中)
 │   ├── nuclei-mcp/             # Nuclei服务 (计划中)
 │   ├── zoomeye-mcp/            # ZoomEye服务 (计划中)
+│   ├── xxx-mcp/                #  (计划中)
 │   └── template/               # 新服务模板
 ├── docs/                        # 项目文档
 ├── scripts/                     # 辅助脚本
